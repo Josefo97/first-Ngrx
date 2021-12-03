@@ -9,3 +9,5 @@ export const multiplicar = createAction('[Contador] Multiplicar',
 export const dividir = createAction('[Contador] Dividir',
         props<{ numero: number }>()
 );
+
+export const reset = createAction('[Contador] Reset');

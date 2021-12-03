@@ -21,7 +21,6 @@ export class HijoComponent implements OnInit {
 
   multiplicar(){
     this.store.dispatch( actions.multiplicar({numero: 3}) );
-
   }
 
   dividir(){
