@@ -24,15 +24,14 @@ export class AppComponent {
   ngOnInit(): void {
     // **Subscripción a cualquier cambio de estado en el store.
     // *? puede ser aplicado en el constructor o en el ngOnInit donde es más recomendable
+    // this.store.subscribe( (contador) => this.contador = contador.contador );
 
-    this.store.subscribe( (state) => {
-      console.log(state);
-      this.contador = state.contador;
-    })
+    // *! la funcion 'select()' nos permite seleccionar un nodo especifico del store
+    this.store.select('contador').subscribe( (contador) => this.contador = contador );
   }
 
+  // ** Disparamos acciones las cuales modificaran la data
   incrementar(){
-    // ** Disparamos acciones las cuales modificaran la data
     this.store.dispatch( actions.incrementar() );
   }
 
