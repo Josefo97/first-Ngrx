@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { AppState } from './app.reducers';
 // *!Modificamos la forma de importación de los actions para mejorar la forma de importación.
 // import { incrementar, decrementar } from './contador/contador.actions';
 import * as actions from './contador/contador.actions';
 
-interface AppState {
-    contador: number;
-}
 
 @Component({
   selector: 'app-root',
